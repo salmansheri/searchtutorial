@@ -1,3 +1,4 @@
+import SearchInput from './components/SearchInput'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -15,7 +16,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="flex flex-col gap-10 items-center p-6">
+          <SearchInput />
+          <div className="flex flex-col items-center w-full">{children}</div>
+       
+
+        </div>
+
+        </body>
     </html>
   )
 }
